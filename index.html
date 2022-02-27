@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Royal</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/constant.css">
+  <!-- Boxicons CDN Link bx-->
+  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- bootstrapcdn CDN Link bx-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- iconscout CDN Link uil (https://iconscout.com/unicons/explore/line)-->
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">
+  <!-- font-awesome CDN Link fax (https://fontawesome.com/icons)-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <!-- favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+  <link rel="manifest" href="favicon_io/site.webmanifest">
+</head>
+
+<body>
+
+  <!-- check online or offline -->
+  <div class="connections">
+    <div class="connection offline">
+      <i class="material-icons material-icons-on wifi-off">wifi_off</i>
+      <p>Opps! Internet is disconnected.</p>
+      <a onclick="location.reload();" class="refreshBtn">Refresh</a>
+      <i class="material-icons material-icons-off close">close</i>
+    </div>
+    <div class="connection online">
+      <i class="material-icons material-icons-on wifi">wifi</i>
+      <p>Hurray! Your Internet connection was restored</p>
+      <i class="material-icons material-icons-off close">close</i>
+    </div>
+  </div>
+
+
+  <!-- custom right click  -->
+  <div class="container wwrapper">
+    <!-- code here -->
+    <div class="menu context--menu ccontent" id="context-menu">
+      <ul class="menu-list menu">
+        <li class="menu-item item" onclick="window.history.back();"><i
+            data-feather="corner-up-left"></i><span>Back</span></li>
+
+        <li class="menu-item item" onclick="window.history.forward();"><i
+            data-feather="corner-up-right"></i><span>Forward</span></li>
+
+        <li class="menu-item item" onclick="location.reload();"><i data-feather="refresh-cw"></i><span>Refresh</span>
+        </li>
+
+        <li class="menu-list item share">
+          <div class="arrow menu-item menu-item-status">
+            <i data-feather="share"></i><span>Share</span><i data-feather="chevron-right" class="menu-item--right"></i>
+          </div>
+
+          <ul class="menu-sub-list share-menu">
+            <li class="menu-item menu-item--blue item"
+              onclick="window.open('https://www.facebook.com/bibek.sha.14268/');"><i
+                data-feather="facebook"></i><span>Facebook</span></li>
+            <li class="menu-item menu-item--pink item"
+              onclick="window.open('https://www.instagram.com/bibeksha1432/');"><i
+                data-feather="instagram"></i><span>Instagram</span></li>
+            <li class="menu-item menu-item--blue item" onclick="window.open('https://twitter.com/BibekSa31789884');"><i
+                data-feather="twitter"></i><span>Twitter</span></li>
+            <li class="menu-item menu-item--purple item" onclick="window.open('https://t.me/bibek10550');"><i
+                data-feather="send"></i><span>Telegram</span></li>
+            <li class="menu-item menu-item--black item" onclick="window.open('https://github.com/bibek10550');"><i
+                data-feather="github"></i><span>GitHub</span><i class="menu-item--checked" data-feather="check"></i>
+            </li>
+          </ul>
+        </li>
+
+        <li class="menu-item item" onclick="Copy();"><i data-feather="link"></i><span>Copy Link Address</span></li>
+        <li class="menu-item item" onclick="FullScreenMode()"><i data-feather="maximize"></i><span>Full Screen</span>
+        </li>
+        <li class="menu-item item" onclick="window.print()"><i data-feather="printer"></i><span>Print</span></li>
+        <li class="menu-item item"><i data-feather="folder-plus"></i><span>Move to</span></li>
+        <li class="menu-item item"><i data-feather="copy"></i><span>Copy to</span></li>
+        <li class="menu-item item"><i data-feather="lock"></i><span>Make Private</span></li>
+        <li class="menu-item item"><i data-feather="download"></i><span>Download</span></li>
+
+      </ul>
+      <div class="menu-list setting">
+        <li class="menu-item menu-item--delete item"><i data-feather="trash-2"></i><span>Delete</span></li>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Nav bar -->
+  <nav>
+    <div class="navbar nav-bar">
+      <i class='bx bx-menu sidebarOpen'></i>
+      <span class="logo navLogo"><a href="https://bibek10550.github.io/bibek/">BibekSah</a></span>
+      <div class="nav-links menu">
+        <div class="sidebar-logo logo-toggle">
+          <span class="logo-name logo"><a href="https://bibek10550.github.io/bibek/">BibekSah</a></span>
+          <i class='bx bx-x sidebarClose'></i>
+        </div>
+
+        <ul class="links nav-links">
+          <li><a href="index.html" class="active-link">HOME</a></li>
+          <li>
+            <a href="#">HTML , CSS & JavaScript</a>
+            <i class='bx bxs-chevron-down htmlcss-arrow arrow  '></i>
+            <ul class="htmlCss-sub-menu sub-menu">
+              <li><a href="qr code generator.html">Qr code generator</a></li>
+              <li><a href="#">Login Forms</a></li>
+              <li><a href="#">Card Design</a></li>
+              <li class="more">
+                <span><a href="#">More</a>
+                  <i class='bx bxs-chevron-right arrow more-arrow'></i>
+                </span>
+                <ul class="more-sub-menu sub-menu">
+                  <li><a href="#">Neumorphism</a></li>
+                  <li><a href="#">Pre-loader</a></li>
+                  <li><a href="#">Glassmorphism</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">JAVASCRIPT</a>
+            <i class='bx bxs-chevron-down js-arrow arrow '></i>
+            <ul class="js-sub-menu sub-menu">
+              <li><a href="#">Dynamic Clock</a></li>
+              <li><a href="#">Form Validation</a></li>
+              <li><a href="#">Card Slider</a></li>
+              <li><a href="#">Complete Website</a></li>
+            </ul>
+          </li>
+          <li><a href="music.html">MUSIC</a></li>
+          <li><a href="#">CONTACT US</a></li>
+        </ul>
+      </div>
+
+      <!-- dark and light button -->
+      <div class="darkLight-searchBox">
+        <div class="dark-light">
+          <i class='bx bx-moon moon'></i>
+          <i class='bx bx-sun sun'></i>
+        </div>
+
+        <!-- search box start -->
+        <div class="search-box">
+          <div class="searchToggle">
+            <i class='bx bx-search search' id="read" onkeyup="closeToggle()"></i>
+          </div>
+          <div class="input-box InputBox search-field">
+            <input type="search" id="SearchInput" placeholder="Search..." onkeyup="search()">
+            <!-- search result dropdown box start -->
+            <ul class="SearchResult" id="ResultBox">
+              <li><a href="https://bibek10550.github.io/bibek/">Bibek</a></li>
+              <li><a href="music.html">Music</a></li>
+              <li><a href="qr code generator.html">Qr code generator</a></li>
+              <li><a href="#">Greeky Shows</a></li>
+              <li><a href="#">VishAcademy</a></li>
+              <li><a href="#">CS Geeks</a></li>
+              <li><a href="#">JP Web</a></li>
+              <li><a href="#">Rampant</a></li>
+              <li><a href="#">Education</a></li>
+            </ul>
+            <!-- search result dropdown box End -->
+          </div>
+          <!-- search box End -->
+        </div>
+        <!-- colour selection-->
+        <div class="searchBox">
+          <div class="searchText" placeholder="Type to Search..">
+            <div class="label">choose color</div>
+            <button id="a" title="Blue" onmouseover="document.bgColor='#2f89fc'" class="colorButton">#2f89fc</button>
+            <button id="b" title="GreenYellow" onmouseover="document.bgColor='#a7ff83'"
+              class="colorButton">#a7ff83</button>
+            <button id="c" title="Light Green" onmouseover="document.bgColor='#21e6c1'"
+              class="colorButton">#21e6c1</button>
+            <button id="d" title="Light Orange" onmouseover="document.bgColor='#ffb174'"
+              class="colorButton">#ffb174</button>
+            <button id="e" title="Yellow" onmouseover="document.bgColor='#fff98c'" class="colorButton">#fff98c</button>
+            <button id="f" title="Light Pink" onmouseover="document.bgColor='#ffcef3'"
+              class="colorButton">#ffcef3</button>
+            <button id="g" title="Blue Voilet" onmouseover="document.bgColor='#775ada'"
+              class="colorButton">#775ada</button>
+            <button id="h" title="Dark Brown" onmouseover="document.bgColor='#34222e'"
+              class="colorButton">#34222e</button>
+            <button id="i" title="Black" onmouseover="document.bgColor='#0b032d'" class="colorButton">#0b032d</button>
+            <button id="j" title="Gray" onmouseover="document.bgColor='#3b3b3b'" class="colorButton">#3b3b3b</button>
+            <button id="k" onmouseover="document.bgColor=''" class="colorButton" title="Reset"></button>
+            <input id="l" class="colorButton" onchange="colorSelected(this)" type="color">
+          </div>
+          <a href="#" class="searchBtn">
+            <i class="fas fa-palette"></i>
+          </a>
+        </div>
+
+      </div>
+      <!-- dark and light button search end-->
+    </div>
+  </nav>
+  <br><br><br>
+
+  <iframe src="https://www.codingnepalweb.com/demos/download-youtube-thumbnail/" class="youtube_thumbnail" width="450px"
+    height="700px">
+    <p>Your browser does not support iframes.</p>
+  </iframe>
+
+  <!-- ==================== FEATHER ICONS JS data-feather (https://feathericons.com/)==================== -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.28.0/feather.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.28.0/feather.js"
+    integrity="sha512-oFCsbxZP/K+0EjvkyIHBvC3ft8LZnO+8kljz0RiJN8ffUCeX0LF1G0WlvU3jMJVaoKBrC+I2ohi4BCpKq2ZgXw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="js/script.js"></script>
+  <script src="js/constant.js"></script>
+
+</body>
+
+</html>
